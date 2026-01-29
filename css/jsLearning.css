@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Bruno+Ace+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Bruno+Ace+SC&display=swap");
 
-
-:root{
+:root {
   --white: #ffffffff;
---ink-black: #00171fff;
---deep-space-blue: #003459ff;
---cerulean: #007ea7ff;
---fresh-sky: #00a8e8ff;
+  --ink-black: #00171fff;
+  --deep-space-blue: #003459ff;
+  --cerulean: #007ea7ff;
+  --fresh-sky: #00a8e8ff;
 }
 html,
 body {
@@ -38,40 +37,41 @@ body {
 }
 
 body {
-font-family: 'Bruno Ace SC', sans-serif;
+  font-family: "Bruno Ace SC", sans-serif;
 }
-#NewAge{
-    background-color: chocolate;
-    padding: 5px 15px;
-    border-radius: 10px;
-    font-weight: bold;
-    color:white;
-    /* letter-spacing: 1.5px; */
+#NewAge {
+  background-color: chocolate;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  /* letter-spacing: 1.5px; */
 }
-.form-label{
-    font-size: 0.8rem;
-    font-weight: bold;
+.form-label {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
-input, select{
+input,
+select {
   outline: none !important;
   box-shadow: none !important;
 }
-.profileRow{
+.profileRow {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(3, 1fr);
 }
-.profileCard{
+.profileCard {
   flex-grow: 1;
 }
 .profile-pic {
-    width: 100px;
-    max-height: 100px;
-    display: inline-block;
-    object-fit: cover;
-    height: 100%;
+  width: 100px;
+  max-height: 100px;
+  display: inline-block;
+  object-fit: cover;
+  height: 100%;
 }
-.removedBtn{
+.removedBtn {
   height: 35px;
   width: 35px;
   display: inline-flex;
@@ -82,29 +82,30 @@ input, select{
   background-color: white;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
-.removedBtn svg{
-    height: 20px;
+.removedBtn svg {
+  height: 20px;
   width: 20px;
 }
-section{
-    padding: 5rem 0;
+section {
+  padding: 5rem 0;
 }
-.countVal{
+.countVal {
   font-weight: bold;
 }
 .counterBtn {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
 }
 .btnICon {
   height: 45px;
   width: 45px;
   border-radius: 15px; /* Squircle looks more modern than a circle */
   background: #e0e0e0;
-  box-shadow: 9px 9px 16px #bebebe, 
-             -9px -9px 16px #ffffff;
+  box-shadow:
+    9px 9px 16px #bebebe,
+    -9px -9px 16px #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,8 +114,9 @@ section{
 }
 
 .btnICon:not(.disabled):active {
-  box-shadow: inset 5px 5px 10px #bebebe, 
-              inset -5px -5px 10px #ffffff;
+  box-shadow:
+    inset 5px 5px 10px #bebebe,
+    inset -5px -5px 10px #ffffff;
 }
 
 /* Optional: make it look unclickable */
@@ -123,54 +125,80 @@ section{
   cursor: not-allowed;
 }
 /* sidebar  */
-:root{
-    --clock-size: 360px;
-    --clock-bg1: url("images/img.jpg");
-    --clock-bg2: url("images/img1.jpg");
-    --clock-bg3: url("images/img2.jpg");
-    --clock-bg4: url("images/img3.jpg");
-     --clock-bg5: url("images/img4.jpg");
+:root {
+  --clock-size: 360px;
+  --clock-bg1: url("https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img3_ohqtvj.jpg");
+  --clock-bg2: url("https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img_xvwbpy.jpg");
+  --clock-bg3: url("https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img1_soudxh.jpg");
+  --clock-bg4: url("https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img4_gkh1de.jpg");
+  --clock-bg5: url("https://res.cloudinary.com/drrw18aos/image/upload/v1769686062/2151665782_ogd6ma.jpg");
+  --clock-bg6: url("https://res.cloudinary.com/drrw18aos/image/upload/v1769686099/1735_ym5dqr.jpg");
+  --clock-bg7: url("https://res.cloudinary.com/drrw18aos/image/upload/v1769686124/2151665810_dro32x.jpg");
 }
 .customDialClockOuter {
-    position: fixed;
-    right: -100%;
-    transform: translateY(-50%);
-    top: 50%;
-    height:  var(--clock-size);
-    max-width:  var(--clock-size);
-    width: 100%;
-    z-index: 999;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.8s ease-in-out;
-    overflow: hidden;
-    /* animation: rotateBackground 70s linear infinite; */
+  position: fixed;
+  right: -100%;
+  transform: translateY(-50%);
+  top: 50%;
+  height: var(--clock-size);
+  max-width: var(--clock-size);
+  width: 100%;
+  z-index: 999;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease-in-out;
+  overflow: hidden;
+  /* animation: rotateBackground 70s linear infinite; */
 }
- .customDialClockOuter::after{
+.customDialClockOuter::after {
   content: "";
   position: absolute;
   inset: 0;
   margin: auto;
   width: 100%;
   height: 100%;
-  background:linear-gradient(
-      rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  var(--clock-bg5) center center;
+  /* Remove the specific var(--clock-bg5) here */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--current-bg);
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
   animation: rotateImage 70s linear infinite;
- }
+  /* Add a transition so images fade into each other */
+  transition: background-image 1.5s ease-in-out;
+}
+.bg-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: opacity 1.5s ease-in-out; /* This creates the smooth fade */
+    animation: rotateImage 70s linear infinite;
+}
 
- @keyframes rotateImage {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
- }
+/* The dark overlay remains consistent */
+.bg-layer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.layer-1 { opacity: 1; }
+.layer-2 { opacity: 0; }
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotateBackground {
   from {
     background-position: 0% 0%;
@@ -180,158 +208,161 @@ section{
   }
 }
 .customDialClockOuter.active {
-    right: 0;
+  right: 0;
 }
 /* ///////////////////////////
  */
 span.clockBtn {
-    height: 50px;
-    width: 60px;
-    display: flex;
-    justify-content: start;
-    padding-left: 10px;
-    align-items: center;
-    background: var(--ink-black);
-    border-radius: 50px 0px 0px 50px;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 999;
-    cursor: pointer;
+  height: 50px;
+  width: 60px;
+  display: flex;
+  justify-content: start;
+  padding-left: 10px;
+  align-items: center;
+  background: var(--ink-black);
+  border-radius: 50px 0px 0px 50px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 999;
+  cursor: pointer;
 }
- span.clockBtn img{
+span.clockBtn img {
   height: 30px;
   width: 30px;
   object-fit: contain;
- }
- .clock {
-    width: var(--clock-size);
-    height: var(--clock-size);
-    position: fixed;
-    inset: 0;
-    margin: auto;
-    border-radius: 50%;
+}
+.clock {
+  width: var(--clock-size);
+  height: var(--clock-size);
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  border-radius: 50%;
 }
 
 /* Individual ticks/numbers on the dial */
 .spike {
-    position: absolute;
-    width: 8px;
-    height: 1px;
-    background: #fff9;
-    line-height: 20px;
-    transform-origin: 50%;
-    z-index: 5;
-    inset: 0;
-    margin: auto;
-    font-style: normal;
-    /* This pushes the spike out to the edge of the circle */
-    transform: rotate(var(--rotate)) translateX(var(--dail-size));
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background: #fff9;
+  line-height: 20px;
+  transform-origin: 50%;
+  z-index: 5;
+  inset: 0;
+  margin: auto;
+  font-style: normal;
+  /* This pushes the spike out to the edge of the circle */
+  transform: rotate(var(--rotate)) translateX(var(--dail-size));
 }
 
 .spike:nth-child(5n + 1) {
-    box-shadow: -7px 0 #fff9;
+  box-shadow: -7px 0 #fff9;
 }
 
 .spike:nth-child(5n + 1):after {
-    content: attr(data-i);
-    position: absolute;
-    right: 22px;
-    top: -10px;
-    transition: 1s linear;
-    /* Counter-rotates the number so it stays upright */
-    transform: rotate(calc( var(--dRotate) - var(--rotate)));
+  content: attr(data-i);
+  position: absolute;
+  right: 22px;
+  top: -10px;
+  transition: 1s linear;
+  /* Counter-rotates the number so it stays upright */
+  transform: rotate(calc(var(--dRotate) - var(--rotate)));
 }
 
 /* Outer Ring (Seconds) */
 .seconds {
-    --dRotate: 0deg;
-    --dail-size: calc((var(--clock-size) / 2) - 8px);
-    font-weight: 800;
-    font-size: 18px;
-    transform: rotate(calc(-1 * var(--dRotate)));
-    position: absolute;
-    color: var(--white);
-    inset: 0;
-    margin: auto;
-    transition: 1s linear;
+  --dRotate: 0deg;
+  --dail-size: calc((var(--clock-size) / 2) - 8px);
+  font-weight: 800;
+  font-size: 18px;
+  transform: rotate(calc(-1 * var(--dRotate)));
+  position: absolute;
+  color: var(--white);
+  inset: 0;
+  margin: auto;
+  transition: 1s linear;
 }
 
 /* Inner Ring (Minutes) */
 .minutes {
-    --dRotate: 0deg;
-    --dail-size: calc((var(--clock-size) / 2) - 65px);
-    font-size: 16px;
-    transform: rotate(calc(-1 * var(--dRotate)));
-    position: absolute;
-    color: var(--white);
-    inset: 0;
-    margin: auto;
-    transition: 1s linear;
+  --dRotate: 0deg;
+  --dail-size: calc((var(--clock-size) / 2) - 65px);
+  font-size: 16px;
+  transform: rotate(calc(-1 * var(--dRotate)));
+  position: absolute;
+  color: var(--white);
+  inset: 0;
+  margin: auto;
+  transition: 1s linear;
 }
 
 /* Center Hour Text */
 .hour {
-    font-size: 40px;
-    font-weight: 900;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-     color: var(--white);
+  font-size: 40px;
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
 }
 
 /* Current Minute Highlight */
 .minute {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1;
-    position: absolute;
-    z-index: 10;
-    right: calc(var(--clock-size) / 4.5);
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--white);
-
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  z-index: 10;
+  right: calc(var(--clock-size) / 4.5);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
 }
 
 .minute:after {
-    content: '';
-    position: absolute;
-    border-right: none;
-    height: 50px;
-    left: -12px;
-    top: 50%;
-    border-radius: 40px 0 0 40px;
-    width: calc(var(--clock-size) / 2.75);
-    transform: translateY(-50%);
+  content: "";
+  position: absolute;
+  border-right: none;
+  height: 50px;
+  left: -12px;
+  top: 50%;
+  border-radius: 40px 0 0 40px;
+  width: calc(var(--clock-size) / 2.75);
+  transform: translateY(-50%);
   backdrop-filter: blur(5px);
-    background-color: rgba(255,255,255,.025);
-    z-index: -1;
-      filter: url(#glass-distortion);
-        overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.025);
+  z-index: -1;
+  filter: url(#glass-distortion);
+  overflow: hidden;
   isolation: isolate;
 }
 .minute::before {
-    content: '';
-    position: absolute;
+  content: "";
+  position: absolute;
   height: 50px;
-    left: -12px;
-    top: 50%;
-      transform: translateY(-50%);
-    border-radius: 40px 0 0 40px;
-    width: calc(var(--clock-size) / 2.75);
-    z-index: 0;
-    overflow: hidden;
-    -webkit-box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7), inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
-    box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7), inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 40px 0 0 40px;
+  width: calc(var(--clock-size) / 2.75);
+  z-index: 0;
+  overflow: hidden;
+  -webkit-box-shadow:
+    inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7),
+    inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
 }
 
 /* Disable animation when resetting from 59 to 0 */
 .stop-anim {
-    transition: 0s linear !important;
+  transition: 0s linear !important;
 }
 .stop-anim .spike:after {
-    transition: 0s linear !important;
+  transition: 0s linear !important;
 }

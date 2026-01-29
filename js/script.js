@@ -292,3 +292,45 @@ function getTime() {
 // Start the clock
 setInterval(getTime, 1000);
 getTime();
+
+// slideshow this clock background images
+// 1. Store your image URLs in an array
+const clockImages = [
+  "https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img3_ohqtvj.jpg",
+  "https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img_xvwbpy.jpg",
+  "https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img1_soudxh.jpg",
+  "https://res.cloudinary.com/drrw18aos/image/upload/v1769685946/img4_gkh1de.jpg",
+  "https://res.cloudinary.com/drrw18aos/image/upload/v1769686062/2151665782_ogd6ma.jpg",
+  "https://res.cloudinary.com/drrw18aos/image/upload/v1769686099/1735_ym5dqr.jpg",
+  "https://res.cloudinary.com/drrw18aos/image/upload/v1769686124/2151665810_dro32x.jpg",
+];
+
+let currentIndex = 0;
+const layer1 = document.querySelector(".layer-1");
+const layer2 = document.querySelector(".layer-2");
+let activeLayer = 1;
+
+function changeBackground() {
+  currentIndex = (currentIndex + 1) % clockImages.length;
+  const nextImageUrl = `url(${clockImages[currentIndex]})`;
+
+  if (activeLayer === 1) {
+    // Load image on layer 2 and fade it in
+    layer2.style.backgroundImage = nextImageUrl;
+    layer2.style.opacity = "1";
+    layer1.style.opacity = "0";
+    activeLayer = 2;
+  } else {
+    // Load image on layer 1 and fade it in
+    layer1.style.backgroundImage = nextImageUrl;
+    layer1.style.opacity = "1";
+    layer2.style.opacity = "0";
+    activeLayer = 1;
+  }
+}
+
+// Set initial image
+layer1.style.backgroundImage = `url(${clockImages[0]})`;
+
+// Change every 5 seconds
+setInterval(changeBackground, 5000);
