@@ -228,11 +228,45 @@ span.clockBtn {
   transform: translateY(-50%);
   z-index: 999;
   cursor: pointer;
+  transform-origin: right;
 }
 span.clockBtn img {
   height: 30px;
   width: 30px;
   object-fit: contain;
+}
+/* 1. The Bell Shake (Icon) */
+@keyframes bellShake {
+  0% { transform: rotate(0); }
+  15% { transform: rotate(20deg); }
+  30% { transform: rotate(-20deg); }
+  45% { transform: rotate(15deg); }
+  60% { transform: rotate(-15deg); }
+  100% { transform: rotate(0); }
+}
+
+/* 2. The Rubber Band (Tab) */
+@keyframes rubberBandTab {
+  0% { transform: translateY(-50%); }
+  30% { transform: translateY(-50%) scaleX(1.25); }
+  50% { transform: translateY(-50%)  scaleX(0.9); }
+  70% { transform: translateY(-50%)  scaleX(1.1); }
+  100% { transform: translateY(-50%); }
+}
+
+/* The Icon setup */
+span.clockBtn img {
+  transform-origin: top center; /* Swings from the top like a bell */
+  display: block;
+}
+
+/* Classes to trigger the animations */
+.animate-rubber {
+   animation: rubberBandTab 0.8s ease-in-out;
+}
+
+.animate-shake {
+  animation: bellShake 0.6s ease-in-out;
 }
 .clock {
   width: var(--clock-size);

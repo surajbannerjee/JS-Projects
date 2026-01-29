@@ -231,6 +231,7 @@ const minutesContainer = document.querySelector(".minutes");
 const minuteText = document.querySelector(".minute");
 const hourText = document.querySelector(".hour");
 const clockBtn = document.querySelector(".clockBtn");
+const clockImg = clockBtn.querySelector(".clockImg");
 let customDialClockOuter = document.querySelector(".customDialClockOuter");
 clockBtn.addEventListener("click", (e) => {
   // This stops the click from "bubbling" up to the body
@@ -334,3 +335,26 @@ layer1.style.backgroundImage = `url(${clockImages[0]})`;
 
 // Change every 5 seconds
 setInterval(changeBackground, 5000);
+
+function startAutoAnimation() {
+  // Only play the "hint" if the clock is NOT currently open
+  if (!customDialClockOuter.classList.contains("active")) {
+    // Add the animation classes
+    clockBtn.classList.add("animate-rubber");
+    clockImg.classList.add("animate-shake");
+
+    // Remove the classes after animation finishes (1s)
+    // so they can be triggered again later
+    setTimeout(() => {
+      clockBtn.classList.remove("animate-rubber");
+      clockImg.classList.remove("animate-shake");
+    }, 1000);
+  }
+}
+
+// 3. Start the loop immediately
+// It will play once every 6 seconds automatically
+setInterval(startAutoAnimation, 6000);
+
+// Run it once right when the page loads
+setTimeout(startAutoAnimation, 2000);
