@@ -358,3 +358,7 @@ setInterval(startAutoAnimation, 6000);
 
 // Run it once right when the page loads
 setTimeout(startAutoAnimation, 2000);
+
+// ================================================
+// bottom navigation menu
+// ================================================
