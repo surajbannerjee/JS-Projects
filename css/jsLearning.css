@@ -61,6 +61,7 @@ select {
   gap: 12px;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .profileCard {
   flex-grow: 1;
 }

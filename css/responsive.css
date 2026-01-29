@@ -1,0 +1,35 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .profileRow {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .profileRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .profileRow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .profileRow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .profileRow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
